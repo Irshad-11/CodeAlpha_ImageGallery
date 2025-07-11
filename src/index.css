@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: for testing */
+/* src/index.css or global.css */
+.scroll-hidden {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+.scroll-hidden::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari, Opera */
+}
+
+/* Global scrollbar styling */
+.custom-scrollbar {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: rgba(192, 128, 96, 0.4) transparent; /* thumb color (dim), transparent track */
+}
+
+/* Webkit browsers */
+.custom-scrollbar::-webkit-scrollbar {
+  height: 8px; /* horizontal scrollbar height */
+  width: 8px;  /* vertical scrollbar width */
+  background: transparent; /* hide track background */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent; /* hide track background */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(192, 128, 96, 0.4); /* dim thumb */
+  border-radius: 8px;
+  border: 2px solid transparent; /* no visible border, just spacing */
+  transition: background-color 0.3s ease;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(192, 128, 96, 0.8); /* brighten thumb on hover */
+}
+
+
+
+@keyframes gradientLight {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes gradientDark {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+
+.bg-gradient-light {
+  background: linear-gradient(270deg, #d1dbdb, #cecfcf, #e7e7e7, #a3a3a3);
+  background-size: 800% 800%;
+  animation: gradientLight 18s ease infinite;
+}
+
+.bg-gradient-dark {
+  background: linear-gradient(270deg, #004e92, #000428, #004e92, #000428);
+  background-size: 800% 800%;
+  animation: gradientDark 18s ease infinite;
+}
+
+@keyframes gradientLight {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes gradientDark {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
